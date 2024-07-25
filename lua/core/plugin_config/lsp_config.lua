@@ -45,6 +45,11 @@ cmp.setup {
   },
 }
 
+-- auto indent going into insert mode in scope
+vim.keymap.set('n', 'i', function ()
+    return string.match(vim.api.nvim_get_current_line(), '%g') == nil and 'cc' or 'i'
+end, {expr=true, noremap=true})
+
 require("lspconfig").clangd.setup{
     handlers = handlers,
     on_attach = on_attach,

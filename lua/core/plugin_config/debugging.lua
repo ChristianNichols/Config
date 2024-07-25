@@ -4,7 +4,7 @@ local dapui = require("dapui")
 dapui.setup()
 require("mason").setup()
 require("mason-nvim-dap").setup({
-    ensure_installed = { "codelldb", "debugpy" },
+    ensure_installed = { "codelldb" },
     handlers = {},
 })
 
@@ -25,5 +25,5 @@ dap.listeners.before.event_exited.dapui_config = function()
   dapui.close()
 end
 
-vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, {})
-vim.keymap.set('n', '<leader>dc', dap.continue, {})
+vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, {})
+vim.keymap.set('n', '<leader>c', dap.continue, {})

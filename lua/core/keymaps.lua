@@ -15,19 +15,23 @@ vim.opt.expandtab = true
 vim.cmd [[
     set encoding=utf-8
     set ruler
-    set nu rnu
+    set nu
     set shm+=I
     set nohlsearch
     set noshowmode
+    set signcolumn=yes
 
     set gcr=a:blinkon1
+
     
     "" split screen vert and horizontal 
     nnoremap <leader>v <cmd>vsplit<cr>
     nnoremap <leader>h <cmd>split<cr>
 
-    nnoremap <C-n> <cmd>bnext<cr>
-    nnoremap <C-p> <cmd>bprev<cr>
-
     set noswapfile
 ]]
+        -- "" Remember cursor position
+    -- augroup vimrc-remember-cursor-position
+        -- autocmd!
+        -- autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    -- augroup END
