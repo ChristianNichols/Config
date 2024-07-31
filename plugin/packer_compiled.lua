@@ -189,10 +189,10 @@ _G.packer_plugins = {
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["tabline.nvim"] = {
+  ["telescope-fzy-native.nvim"] = {
     loaded = true,
-    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/tabline.nvim",
-    url = "https://github.com/kdheepak/tabline.nvim"
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -203,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/treesj",
     url = "https://github.com/Wansmer/treesj"
+  },
+  ["vim-better-whitespace"] = {
+    loaded = true,
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/vim-better-whitespace",
+    url = "https://github.com/ntpeters/vim-better-whitespace"
   },
   ["vim-commentary"] = {
     loaded = true,

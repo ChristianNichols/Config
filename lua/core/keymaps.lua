@@ -15,7 +15,7 @@ vim.opt.expandtab = true
 vim.cmd [[
     set encoding=utf-8
     set ruler
-    set nu
+    set rnu
     set shm+=I
     set nohlsearch
     set noshowmode
@@ -27,6 +27,8 @@ vim.cmd [[
     "" split screen vert and horizontal 
     nnoremap <leader>v <cmd>vsplit<cr>
     nnoremap <leader>h <cmd>split<cr>
+
+    set clipboard=unnamedplus
 
     set noswapfile
 ]]

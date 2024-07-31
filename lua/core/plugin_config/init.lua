@@ -8,4 +8,5 @@ require("core.plugin_config.completions")
 require("core.plugin_config.gitsigns")
 require("core.plugin_config.debugging")
 require("core.plugin_config.lualine")
+require("core.plugin_config.whitespace")
 

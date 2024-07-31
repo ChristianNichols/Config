@@ -1,6 +1,11 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "clangd", "pyright" }
+    ensure_installed = {
+        "lua_ls",
+        "clangd",
+        "pyright",
+        "asm_lsp",
+    }
 })
 
 local on_attach = function(_, _)
@@ -27,6 +32,10 @@ require('lspconfig').lua_ls.setup({
             },
         },
     },
+})
+
+vim.diagnostic.config({
+    signs = false,
 })
 
 vim.api.nvim_set_hl(0, 'NormalFloat', {
@@ -57,6 +66,12 @@ require("lspconfig").clangd.setup{
 }
 
 require("lspconfig").pyright.setup{
+    handlers = handlers,
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+require("lspconfig").asm_lsp.setup{
     handlers = handlers,
     on_attach = on_attach,
     capabilities = capabilities,
