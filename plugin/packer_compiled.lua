@@ -94,10 +94,20 @@ _G.packer_plugins = {
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
@@ -118,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
+  },
+  ["lsp_lines.nvim"] = {
+    loaded = true,
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://github.com/ErichDonGubler/lsp_lines.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -188,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cjn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/cjn/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,

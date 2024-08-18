@@ -1,6 +1,5 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local fn = vim.fn local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({
         'git',
@@ -34,15 +33,21 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use "nvim-telescope/telescope-fzy-native.nvim"
+    use "nvim-telescope/telescope-file-browser.nvim"
+
     use {--mason lsp
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
 
+    use "ErichDonGubler/lsp_lines.nvim"
+
     --completion
     use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-path'
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'

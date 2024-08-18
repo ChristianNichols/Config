@@ -9,4 +9,6 @@ require("core.plugin_config.gitsigns")
 require("core.plugin_config.debugging")
 require("core.plugin_config.lualine")
 require("core.plugin_config.whitespace")
+require("core.plugin_config.lsp_lines")
+require("core.plugin_config.bufferline")
 

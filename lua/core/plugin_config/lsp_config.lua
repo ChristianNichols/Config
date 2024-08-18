@@ -35,7 +35,11 @@ require('lspconfig').lua_ls.setup({
 })
 
 vim.diagnostic.config({
+    virtual_text = false,
     signs = false,
+    underline = true,
+    update_in_insert = true,
+    severity_sort = false,
 })
 
 vim.api.nvim_set_hl(0, 'NormalFloat', {
@@ -48,16 +52,27 @@ vim.api.nvim_set_hl(0, 'FloatBorder', {
 local cmp = require("cmp")
 
 cmp.setup {
+  sources = {
+        { name = 'buffer',
+            option = {
+                get_bufnrs = function()
+                return vim.api.nvim_list_bufs()
+                end
+            }
+        },
+
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+        { name = 'path' },
+  },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
 }
 
--- auto indent going into insert mode in scope
-vim.keymap.set('n', 'i', function ()
-    return string.match(vim.api.nvim_get_current_line(), '%g') == nil and 'cc' or 'i'
-end, {expr=true, noremap=true})
+require("luasnip.loaders.from_vscode").lazy_load()
+
 
 require("lspconfig").clangd.setup{
     handlers = handlers,
