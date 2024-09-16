@@ -4,14 +4,14 @@ local devicons = require("nvim-web-devicons")
 
 devicons.setup()
 
-vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>b', builtin.current_buffer_fuzzy_find, {})
-vim.keymap.set('n', '<leader>r', builtin.oldfiles, {})
+vim.keymap.set('n', '<leader>f', builtin.find_files, {silent=true})
+vim.keymap.set('n', '<leader>g', builtin.live_grep, {silent=true})
+vim.keymap.set('n', '<leader>b', builtin.current_buffer_fuzzy_find, {silent=true})
+vim.keymap.set('n', '<leader>r', builtin.oldfiles, {silent=true})
 
 
 -- open file_browser with the path of the current buffer
-vim.keymap.set("n", "<leader>l", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", {})
+vim.keymap.set("n", "<leader>b", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", {})
 
 telescope.setup {
     pickers = {

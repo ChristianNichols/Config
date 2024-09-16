@@ -20,7 +20,7 @@ vim.cmd [[
     set nohlsearch
     set noshowmode
     set signcolumn=yes
-
+    set t_ut=
     set gcr=a:blinkon1
 
 

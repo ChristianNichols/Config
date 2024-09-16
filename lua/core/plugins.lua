@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
     }
     use "nvim-telescope/telescope-fzy-native.nvim"
     use "nvim-telescope/telescope-file-browser.nvim"
+    use 'j-morano/buffer_manager.nvim'
+    use 'kdheepak/lazygit.nvim'
 
     use {--mason lsp
         "williamboman/mason.nvim",
